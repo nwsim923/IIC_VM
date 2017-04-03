@@ -1,3 +1,5 @@
+//상규 첫번째 소스
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
