@@ -1,101 +1,105 @@
-//»ó±Ô Ã¹¹øÂ° ¼Ò½º
+//ìƒê·œ ì²«ë²ˆì§¸ ì†ŒìŠ¤
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#include <Windows.h>
+#include <curses.h>
+//#include <Windows.h>
 
 
 void PrintList ()
 {
-	puts("---------------------------------------------------\n");
-	puts("Çö Àç°í·®\n");
-	puts("1. Äİ¶ó   --°³\n");
-	puts("2. »çÀÌ´Ù --°³\n");
-	puts("3. È¯Å¸   --°³\n");
-	puts("---------------------------------------------------\n");
+    puts("---------------------------------------------------\n");
+    puts("í˜„ ì¬ê³ ëŸ‰\n");
+    puts("1. ì½œë¼   --ê°œ\n");
+    puts("2. ì‚¬ì´ë‹¤ --ê°œ\n");
+    puts("3. í™˜íƒ€   --ê°œ\n");
+    puts("---------------------------------------------------\n");
 }
 
 void ListToDo()
 {
-	puts("1. µ¿ÀüÅõÀÔ\n");
-	puts("2. µ¿Àü»©±â\n");
-	puts("3. »óÇ°¼±ÅÃ\n");
-	puts("4. printlist\n");
-	puts("5. listtodo\n");
-	puts("6. exit\n");
-}
-
-
-void user()
-{
-	int num;
-	int roop=1;
-	while(roop)
-	{
-
-		system("cls");
-		PrintList();
-		ListToDo();
-
-		printf("¿øÇÏ´Â ÀÛ¾÷À» ¼±ÅÃÇÏ¼¼¿ä : ");
-		scanf("%d", &num);
-
-		switch(num)
-		{
-		case 1:
-			InsertCoin();
-			break;
-
-		case 2:
-			Refund();
-			break;
-
-		case 3:
-			Order();
-			break;
-
-		case 4:
-			PrintList();
-			break;
-
-		case 5:
-			ListToDo();
-			break;
-
-		case 6:
-			printf("ÀÌ¿ëÇØÁÖ¼Å¼­ °¨»çÇÕ´Ï´Ù.\n\n");
-			roop=0;
-			break;
-		}
-	}
+    puts("1. ë™ì „íˆ¬ì…\n");
+    puts("2. ë™ì „ë¹¼ê¸°\n");
+    puts("3. ìƒí’ˆì„ íƒ\n");
+    puts("4. printlist\n");
+    puts("5. listtodo\n");
+    puts("6. exit\n");
 }
 
 int InsertCoin()
 {
-	puts("InsertCoinÀÔ´Ï´Ù.");
-	Sleep(2000);
-	return 0;
+    puts("InsertCoinì…ë‹ˆë‹¤.");
+    // Sleep(2000);
+    return 0;
 }
 
 int Refund()
 {
-	puts("RefundÀÔ´Ï´Ù.");
-	Sleep(2000);
-	return 0;
+    puts("Refundì…ë‹ˆë‹¤.");
+    // Sleep(2000);
+    return 0;
 }
 
 int Order()
 {
-	puts("OrderÀÔ´Ï´Ù.");
-	Sleep(2000);
-	return 0;
+    puts("Orderì…ë‹ˆë‹¤.");
+    // Sleep(2000);
+    return 0;
 }
+
+void user()
+{
+    int num;
+    int roop=1;
+    while(roop)
+    {
+        //system("cls");
+        //system("clear");
+        PrintList();
+        ListToDo();
+        
+        printf("ì›í•˜ëŠ” ì‘ì—…ì„ ì„ íƒí•˜ì„¸ìš” : ");
+        scanf("%d", &num);
+        
+        switch(num)
+        {
+            case 1:
+                InsertCoin();
+                break;
+                
+            case 2:
+                Refund();
+                break;
+                
+            case 3:
+                Order();
+                break;
+                
+            case 4:
+                PrintList();
+                break;
+                
+            case 5:
+                ListToDo();
+                break;
+                
+            case 6:
+                printf("ì´ìš©í•´ì£¼ì…”ì„œ ê°ì‚¬í•©ë‹ˆë‹¤.\n\n");
+                roop=0;
+                break;
+        }
+    }
+}
+
+
 
 int main (void)
 {
-
-	user();
-
-	return 0;
+    
+    printf("Xcode ver\n");
+    
+    user();
+    
+    return 0;
 }
