@@ -14,7 +14,7 @@ int main(void)
 	while(1)
 	{
 		ShowMenu();
-		fputs("선택하세요 : ", stdout);
+		fputs("선택하세요 :  ", stdout);
 		scanf("%d", &inputMenu);
 		fflush(stdin);
 
