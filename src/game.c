@@ -42,20 +42,23 @@ void resultCard(void){
      usr=ChoiceCard();
      usr=ChoiceOddEven();
 
-     if(com>usr)
+     if(com>usr){
         puts("com win");
+        coin ++;
+        coin ++;
+     }
      else if(com<usr)
-
         puts("you win");
-     else
+     else{
         puts("draw");
+        coin ++;
+     }
 
 }
 
 void resultOddEven(void){
    com=Com();
    usr=ChoiceOddEven();
-
     if(com%2==usr%2){
        puts("you win");
     	coin ++;
@@ -76,17 +79,22 @@ void write(void){
 
 }
 
- int main() {
+//A~K까지 1~13의 카드 중에서 사용자가 골라 컴퓨터와 비교하여 높은쪽이 승리
+// 비기면 코인 1개획 이기면 코인 2개 획득
+void cardgame(){
+	CardCom();
+	ChoiceCard();
+	resultCard();
+	write();
 
+}
+//홀수,짝 중에서 사용자가 골라 컴퓨터와 비교하여 같으면 사용자 승리 틀리면 컴퓨터 승리
+//사용자가 승리할 경우 코인 1개 획
+void EvenOddGame(){
+	resultOddEven();
+	ChoiceOddEven();
+	resultOddEven();
+	write();
 
-    ChoiceCard();
-    ChoiceOddEven();
-    write();
-
-    resultCard();
-    resultOddEven();
-    write();
- }
-
-
+}
 
