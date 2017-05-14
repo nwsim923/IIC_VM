@@ -1,8 +1,49 @@
-#include <stdio.h>
+#include"common.h"
+#include"screenOut.h"
+#include"ItemData.h"
+#include"ItemFunc.h"
 
-int main() {
+enum {INPUT=1,SHOWALL,SEARCH,CHANGE,QUIT};
 
-	printf("나는 바보입니다.");
-	printf("나는 ㅇㅇㅇs");
+int main(void)
+{
+	int inputMenu=0;
+
+	LoadDataFromFileInStruct();
+
+	while(1)
+	{
+		ShowMenu();
+		fputs("선택하세요 : ", stdout);
+		scanf("%d", &inputMenu);
+		fflush(stdin);
+
+		switch (inputMenu)
+		{
+		case INPUT:
+			InputItemData();
+			break;
+
+		case SHOWALL:
+			ShowAllData();
+			break;
+
+		case SEARCH:
+			SearchItemData();
+			break;
+
+		case CHANGE:
+			ChangeItemData();
+			break;
+
+		}
+
+		if(inputMenu == QUIT)
+		{
+			puts("이용해 주셔서 감사합니다.\n");
+			break;
+		}
+	}
+
 	return 0;
 }
