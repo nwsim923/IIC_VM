@@ -20,5 +20,6 @@ void ShowItemInfoByPtr(ItemData* Item)
 	printf("::::::::::::::: \n");
 	printf(":: 제품 : %s \n", Item->name);
 	printf(":: 상품갯수 : %s \n", Item->number);
+	printf(":: 상품가격 : %s \n", Item->cost);
 	printf("::::::::::::::: \n");
 }

@@ -23,8 +23,11 @@ void InputItemData(void)
 	fputs("제품 입력 : ", stdout);
 	gets(pdata->name);
 
-	printf("상품갯수 입력 : ");
+	fputs("상품갯수 입력 : ", stdout);
 	gets(pdata->number);
+	
+	fputs("가격 입력 : ", stdout);
+	gets(pdata->cost);
 
 	ItemList[numOfData] = pdata;
 	numOfData++;
